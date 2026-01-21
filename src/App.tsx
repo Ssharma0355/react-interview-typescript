@@ -1,7 +1,15 @@
 import React from "react";
+import { Todo } from "./components/Todo";
 
 export const App: React.FC =()=>{
-  return <h1>Hello app</h1>
+  return (
+    <>
+    <Todo />
+    <Todo />
+    <Todo />
+    <Todo />
+    </>
+  )
 
 
 }
