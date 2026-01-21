@@ -1,6 +1,7 @@
 import React from "react";
 import { Todo } from "./components/Todo";
 import { MyButton } from "./components/Button";
+import { OpenForms } from "./components/OpenForms";
 
 export const App: React.FC =()=>{
   return (
@@ -10,6 +11,7 @@ export const App: React.FC =()=>{
     <Todo />
     <Todo />
     <Todo /> */}
+    <OpenForms />
     </>
   )
 

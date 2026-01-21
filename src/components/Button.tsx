@@ -10,6 +10,11 @@ interface MyButtonProps{
 interface MyState{
     state: number,
 }
+
+interface ChangeBook{
+    name: string,
+    price: number
+}
 export const MyButton: React.FC <MyButtonProps>=(props)=>{
     // MyButton: React.FC for functional component
 
@@ -17,9 +22,13 @@ export const MyButton: React.FC <MyButtonProps>=(props)=>{
     // destructuring the props
 
 
-    const [count, setCount] = useState<number>(0)
+    const [count, setCount] = useState<number>(0);
+    //  using state with type
 
-    //  using state
+    const [book, setBook] = useState<ChangeBook>({
+        name:"Sachin",
+        price:100
+    })
     
     return(
         <>
@@ -27,6 +36,11 @@ export const MyButton: React.FC <MyButtonProps>=(props)=>{
         {/* <button onClick={props.onClick}>{props.text}</button> */}
         <button onClick={()=>setCount(count+1)}>{text}</button>
         {/* <button onClick={props.onClick1}>{props.text}</button> */}
+
+        <br />
+
+        <h1>Book is {book.name} and price is {book.price}</h1>
+        <button onClick={()=>setBook({name:" Sharma", price:4000})}>Change Book</button>
         </>
     )
 
