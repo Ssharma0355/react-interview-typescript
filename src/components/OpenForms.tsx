@@ -7,11 +7,21 @@ export const OpenForms: React.FC =()=>{
     e.preventDefault();
     setValue(e.target.value)
    }
+
+   const formSubmit =(e: React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
+    console.log(value);
+    console.log(e)
+
+   }
     return(
        <>
+       <form onSubmit={formSubmit}>
        <h1>Value is: {value}</h1>
-          <input onChange={handleNameChange} type="text" placeholder="Enter anything" value={value}/> 
+        <input onChange={handleNameChange} type="text" placeholder="Enter anything" value={value}/> 
+        <button type="submit">Submit</button>
+       </form>
+
        </>
-         
     )
 }
