@@ -5,6 +5,8 @@ import { OpenForms } from "./components/OpenForms";
 import { Practice } from "./components/Todo/Practice";
 import { PersonInfo } from "./components/PersonInfo";
 import { PostPerson } from "./components/PostPerson";
+import { UserInfo } from "./components/practice/UserInfo";
+import { AddUser } from "./components/practice/AddUser";
 
 export const App: React.FC =()=>{
   return (
@@ -16,8 +18,10 @@ export const App: React.FC =()=>{
     <Todo /> */}
     {/* <OpenForms />
     <Practice /> */}
-    <PostPerson />
-    <PersonInfo />
+    {/* <PostPerson />
+    <PersonInfo /> */}
+    <UserInfo />
+    <AddUser />
     </>
   )
 
