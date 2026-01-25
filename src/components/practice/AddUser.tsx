@@ -35,10 +35,9 @@ export const AddUser: React.FC=()=>{
         }
         catch(err){
             console.log(err)
-
         }
-
     }
+
     return(
         <form onSubmit={addUser}>
             <input type="text"
@@ -54,7 +53,7 @@ export const AddUser: React.FC=()=>{
             value={userDetail.email}
             placeholder="Enter email"
             onChange={handleUser} />
-
+            <br />
             <button type="submit">Submit</button>
         </form>
     )
