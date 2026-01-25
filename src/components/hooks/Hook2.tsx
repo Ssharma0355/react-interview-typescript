@@ -5,7 +5,12 @@ interface detailInterface{
     email?:string
 }
 
-export const Hook2: React.FC=()=>{
+interface PropName{
+    text: string
+    number?:number
+}
+
+export const Hook2: React.FC<PropName>=(props)=>{
     const [details, setDetails] = useState<detailInterface[]>([])
     useEffect(()=>{
         try{
@@ -23,6 +28,8 @@ export const Hook2: React.FC=()=>{
     console.log(details);
     return(
         <div>
+            <h1>{props.text}</h1>
+            <h1>{props.number}</h1>
             {details.map((user)=>(
                 <li key={user.id}>{user.id}
                 <h2>{user.name}</h2>
