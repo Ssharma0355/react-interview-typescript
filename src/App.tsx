@@ -8,6 +8,7 @@ import { PostPerson } from "./components/PostPerson";
 import { UserInfo } from "./components/practice/UserInfo";
 import { AddUser } from "./components/practice/AddUser";
 import { Hook1 } from "./components/hooks/Hook1";
+import Parent from "./components/hooks/context/Parent";
 
 export const App: React.FC =()=>{
   return (
@@ -23,7 +24,8 @@ export const App: React.FC =()=>{
     <PersonInfo /> */}
     {/* <UserInfo />
     <AddUser /> */}
-    <Hook1 />
+    {/* <Hook1 /> */}
+    <Parent />
     </>
   )
 
