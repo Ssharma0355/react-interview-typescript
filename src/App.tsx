@@ -9,6 +9,7 @@ import { UserInfo } from "./components/practice/UserInfo";
 import { AddUser } from "./components/practice/AddUser";
 import { Hook1 } from "./components/hooks/Hook1";
 import Parent from "./components/hooks/context/Parent";
+import { MainProvider } from "./components/hooks/contextapi/MainProvider";
 
 export const App: React.FC =()=>{
   return (
@@ -26,7 +27,8 @@ export const App: React.FC =()=>{
     <AddUser /> */}
     {/* <Hook1 /> */}
     <Parent />
-    
+    <MainProvider />
+
     </>
   )
 
