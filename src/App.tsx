@@ -10,6 +10,9 @@ import { AddUser } from "./components/practice/AddUser";
 import { Hook1 } from "./components/hooks/Hook1";
 import Parent from "./components/hooks/context/Parent";
 import { MainProvider } from "./components/hooks/contextapi/MainProvider";
+import { ContentContext, ContentProvider } from "./components/hooks/unknownContext/ParentMain";
+import ChildA from "./components/hooks/contextapi/ChildA";
+import UsedContent from "./components/hooks/unknownContext/UsedContent";
 
 export const App: React.FC =()=>{
   return (
@@ -26,8 +29,11 @@ export const App: React.FC =()=>{
     {/* <UserInfo />
     <AddUser /> */}
     {/* <Hook1 /> */}
-    <Parent />
-    <MainProvider />
+    {/* <Parent />
+    <MainProvider /> */}
+    <ContentProvider>
+    <UsedContent />
+    </ContentProvider>
 
     </>
   )
